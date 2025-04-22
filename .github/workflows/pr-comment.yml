@@ -51,7 +51,7 @@ jobs:
             ### Links
 
             * Jira ticket:
-            * Testing URL:
+            * Testing URL: ${{ env.FIREBASE_URL }}
                 
             ### Comments / Changes
             * a list of the changes you made (e.g. "Added a new `buttonStyle` prop to `MyForm`)
