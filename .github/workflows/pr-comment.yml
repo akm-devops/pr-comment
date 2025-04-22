@@ -50,7 +50,7 @@ jobs:
 
             ### Links
 
-            * Jira ticket: [${{ github.event.pull_request.base.ref }}](https://cognosos.atlassian.net/browse/${{ github.event.pull_request.base.ref }}}
+            * Jira ticket: [${{ github.event.pull_request.base.ref }}](https://cognosos.atlassian.net/browse/${{ github.event.pull_request.base.ref }})
             * Testing URL: [Firebase URL](${{ env.FIREBASE_URL }})
                 
             ### Comments / Changes
