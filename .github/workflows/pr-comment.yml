@@ -35,7 +35,8 @@ jobs:
       - name: Git Checkout
         uses: actions/checkout@v4
 
-      - uses: mshick/add-pr-comment@v2
+      - name: pr comment test
+        uses: mshick/add-pr-comment@v2
         with:
           message: |
             **Hello**
