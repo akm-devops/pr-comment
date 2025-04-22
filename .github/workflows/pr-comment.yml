@@ -1,0 +1,43 @@
+name: Test PR Comment
+
+on:
+    pull_request:
+      # Trigger the workflow when a pull request is opened, edited, reopened or closed
+      types:
+        - opened
+        - edited
+        - reopened
+        - closed
+  
+    workflow_dispatch:
+
+jobs:
+
+  notify_with_payload:
+    if: github.event.pull_request.merged == true ||
+        github.event_name == 'workflow_dispatch' ||
+        github.event.action == 'opened' ||
+        github.event.action == 'edited' ||
+        github.event.action == 'reopened' ||
+        github.event_name == 'push'             # need to remove
+
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 10
+
+    env:
+    #   FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      RUN_NUMBER: ${{ github.run_number }}
+      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+    
+    steps:
+
+      - name: Git Checkout
+        uses: actions/checkout@v4
+
+      - uses: mshick/add-pr-comment@v2
+        with:
+          message: |
+            **Hello**
+            🌏
+            !
