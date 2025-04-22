@@ -50,8 +50,8 @@ jobs:
 
             ### Links
 
-            * Jira ticket: https://cognosos.atlassian.net/browse/${{ github.event.pull_request.base.ref }}
-            * Testing URL: ${{ env.FIREBASE_URL }}
+            * Jira ticket: [${{ github.event.pull_request.base.ref }}](https://cognosos.atlassian.net/browse/${{ github.event.pull_request.base.ref }}}
+            * Testing URL: [Firebase URL](${{ env.FIREBASE_URL }})
                 
             ### Comments / Changes
             * a list of the changes you made (e.g. "Added a new `buttonStyle` prop to `MyForm`)
