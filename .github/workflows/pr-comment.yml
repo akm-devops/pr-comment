@@ -31,16 +31,28 @@ jobs:
     #   FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       RUN_NUMBER: ${{ github.run_number }}
       BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+      FIREBASE_URL: https://my-firebase-url.com
     
     steps:
 
       - name: Git Checkout
         uses: actions/checkout@v4
 
+      
+
       - name: pr comment test
         uses: mshick/add-pr-comment@v2
         with:
           message: |
-            **Hello**
-            🌏
-            !
+            ### Summary
+
+            A summary of your changes.
+
+            ### Links
+
+            * Jira ticket:
+            * Testing URL:
+                
+            ### Comments / Changes
+            * a list of the changes you made (e.g. "Added a new `buttonStyle` prop to `MyForm`)
+            * comments about any particular changes that need explanation
