@@ -50,7 +50,7 @@ jobs:
 
             ### Links
 
-            * Jira ticket: https://cognosos.atlassian.net/browse/SMARTHOSP-10020
+            * Jira ticket: https://cognosos.atlassian.net/browse/${{ github.event.pull_request.base.ref }}
             * Testing URL: ${{ env.FIREBASE_URL }}
                 
             ### Comments / Changes
